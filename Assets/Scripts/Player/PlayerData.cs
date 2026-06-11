@@ -14,6 +14,7 @@ public class PlayerData : MonoBehaviour
     public float jumpHeight = 4f;
     public float jumpTimeToApex = 0.4f;
     public float fallGravityMultiplier = 2.5f;
+    public float jumpCutGravityMultiplier = 2f;
 
     [Header("=== COYOTE TIME и JUMP BUFFER ===")]
 
