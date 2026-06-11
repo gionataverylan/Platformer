@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
 
     private float _gravityScale;
 
+    public bool  IsGrounded         => _isGrounded;
+    public bool  IsJumping          => _isJumping;
+    public bool  IsJumpCut          => _isJumpCut;
+    public float CoyoteTimeCounter  => _coyoteTimeCounter;
+    public float JumpBufferCounter  => _jumpBufferCounter;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -171,5 +177,28 @@ public class PlayerController : MonoBehaviour
         {
             _rb.gravityScale = _gravityScale;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (_groundCheckPoint == null) return;
+
+        Gizmos.color = _isGrounded ? Color.green : Color.red;
+
+        Gizmos.DrawWireCube(
+            _groundCheckPoint.position,
+            _groundCheckSize
+        );
+
+        float crossSize = 0.05f;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(
+            _groundCheckPoint.position + Vector3.left * crossSize,
+            _groundCheckPoint.position + Vector3.right * crossSize
+        );
+        Gizmos.DrawLine(
+            _groundCheckPoint.position + Vector3.up * crossSize,
+            _groundCheckPoint.position + Vector3.down * crossSize
+        );
     }
 }

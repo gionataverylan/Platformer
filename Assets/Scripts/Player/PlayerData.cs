@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Player/PlayerData", fileName = "PlayerData")]
-public class PlayerData : MonoBehaviour
+public class PlayerData : ScriptableObject
 {
     [Header("Движение")]
 
