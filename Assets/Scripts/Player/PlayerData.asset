@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   runMaxSpeed: 10
-  runAccelerationTime: 0.1
-  runDecelerationTime: 0.15
-  jumpHeight: 4
-  jumpTimeToApex: 0.4
-  fallGravityMultiplier: 2.5
-  jumpCutGravityMultiplier: 2
-  coyoteTime: 0.1
-  jumpBufferTime: 0.1
+  runAccelerationTime: 0.08
+  runDecelerationTime: 0.12
+  jumpHeight: 4.5
+  jumpTimeToApex: 0.35
+  fallGravityMultiplier: 2.8
+  jumpCutGravityMultiplier: 2.2
+  coyoteTime: 0.15
+  jumpBufferTime: 0.12
